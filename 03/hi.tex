@@ -1,0 +1,134 @@
+\documentclass{article}
+\title{My first doc}
+\author{S.A.Abdulla}
+\usepackage{xcolor,pdflscape,graphicx,hyperref}
+\usepackage{natbib,verbatim}
+\usepackage{listings}
+\begin{document}
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+\textcolor{red}{Abdulla}
+
+Hi, I am {\large abdulla}. I am 21 years old and studying CS \footnote{Computer systems} in the University of Colombo School of Computing, and I travel by bike. I like to drive to the university on \textbf{Pulsar 135}, but my dad tells me to buy a \textbf{scooter}, which I don't like to drive \cite{book1}.
+
+How are you right now?
+
+\begin{verbatim}
+This environment helps to use commands that are used in LaTeX to print them without using them to format, like \textbf{hi}, \textit{new}.
+\end{verbatim}
+
+\section{Main Topic}
+Hi
+\subsection{Subtopic}
+Hi
+\newpage
+\subsubsection{Subsubtopic}
+{\large How are you}
+\subsubsection{Subsubtopic 2}
+Hi
+\subsection{Subtopic 2}
+\newpage
+\subsection{Subtopic 3}
+Abdulla
+\section{Main Topic 2}
+Yunus \cite{book2}
+\subsection{Subsection under Topic 2}
+Nice one
+\newpage
+\begin{landscape}
+	\begin{itemize}
+		\item One
+		\item Two
+		\item Three
+	\end{itemize}
+
+	HI, how are you everyone?
+
+	\begin{enumerate}
+		\item Abdulla
+		\item Yunus
+		\item Ayyob
+	\end{enumerate}
+\end{landscape}
+\newpage
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.02]{abdulla}
+	\caption{First Image}
+	\label{fig:123}
+\end{figure}
+This is the image \ref{fig:123} in the document.
+
+\newpage
+
+\begin{figure}[t!]
+	\begin{center}
+		\includegraphics[scale=0.02]{abdulla}
+		\caption{Second Image}
+		\label{fig:456}
+	\end{center}
+\end{figure}
+
+This is the image \ref{fig:456} in the document.
+\newpage
+
+\begin{figure}[b!]
+	\begin{flushright}
+		\includegraphics[scale=0.02]{abdulla}
+		\caption{Third Image}
+		\label{fig:789}
+	\end{flushright}
+\end{figure}
+
+This is the image \ref{fig:789} in the document.
+
+\newpage
+
+\begin{table}
+	\begin{tabular}{lcr}
+		column one & column Two & column three \\
+		1 & 2 & 3 \\
+		5 & 6 & 7 \\
+	\end{tabular}
+	\caption{Old}
+	\label{tab:123}
+\end{table}
+
+This is Table \ref{tab:123} in the document. What is happening if we try to have both tables on one page? It prints all the captions one after another after printing the \cite{book2} tables.
+
+\newpage
+
+\begin{table}
+	\begin{tabular}{|l|c|r|}
+		\hline
+		\textbf{Column one} & \textbf{Column Two} & \textbf{Column three} \\
+		\hline
+		1 & 2 & 3 \\
+		5 & 6 & 7 \\
+		\hline
+	\end{tabular}
+	\caption{New}
+	\label{tab:456}
+\end{table}
+
+This is Table \ref{tab:456} in the document.
+
+\newpage
+\begin{lstlisting}[caption={Your code},label={code:yourcode}]
+    % Include your code here
+\end{lstlisting}
+\newpage
+
+\bibliographystyle{ieeetr}
+\bibliography{hi}
+
+\end{document}
